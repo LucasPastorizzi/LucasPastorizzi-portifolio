@@ -4,19 +4,24 @@ import { useRef } from "react";
 
 const technologies = [
   {
-    name: "TypeScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    description: "Tipagem estática",
+    name: "Java",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    description: "Aplicações robustas",
   },
   {
-    name: "JavaScript",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-    description: "ES6+ moderno",
+    name: "Spring",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+    description: "Framework Java",
   },
   {
-    name: "React",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-    description: "Interfaces reativas",
+    name: "Spring Boot",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/springboot/springboot-original.svg",
+    description: "Microservices",
+  },
+  {
+    name: "Hibernate",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/hibernate/hibernate-original.svg",
+    description: "ORM Java",
   },
   {
     name: "HTML5",
@@ -29,9 +34,29 @@ const technologies = [
     description: "Estilização avançada",
   },
   {
-    name: "Tailwind",
+    name: "Tailwind CSS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
     description: "Utility-first CSS",
+  },
+  {
+    name: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    description: "ES6+ moderno",
+  },
+  {
+    name: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    description: "Tipagem estática",
+  },
+  {
+    name: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    description: "Interfaces reativas",
+  },
+  {
+    name: "Next.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    description: "React Framework",
   },
   {
     name: "Node.js",
@@ -39,9 +64,19 @@ const technologies = [
     description: "Backend JS",
   },
   {
-    name: "Java",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    description: "Aplicações robustas",
+    name: "Python",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    description: "Linguagem versátil",
+  },
+  {
+    name: "Kanban",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg",
+    description: "Gestão visual",
+  },
+  {
+    name: "Scrum",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg",
+    description: "Metodologia ágil",
   },
 ];
 
@@ -74,7 +109,7 @@ const Technologies = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Tecnologias que <span className="text-gradient-yellow">utilizo</span>
+            Tecnologias que <span className="text-gradient-accent">utilizo</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Ferramentas e linguagens que domino para criar soluções completas
@@ -85,7 +120,7 @@ const Technologies = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6"
         >
           {technologies.map((tech) => (
             <motion.div

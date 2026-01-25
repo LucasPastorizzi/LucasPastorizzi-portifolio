@@ -38,7 +38,7 @@ const Hero = () => {
         >
           <span className="text-foreground">Olá, eu sou</span>
           <br />
-          <span className="text-gradient-yellow">Seu Nome</span>
+          <span className="text-gradient-accent">Seu Nome</span>
         </motion.h1>
 
         <motion.p

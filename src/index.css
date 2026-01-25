@@ -17,7 +17,7 @@
     --popover: 0 0% 6%;
     --popover-foreground: 0 0% 100%;
 
-    --primary: 50 100% 50%;
+    --primary: 0 0% 75%;
     --primary-foreground: 0 0% 0%;
 
     --secondary: 0 0% 12%;
@@ -26,7 +26,7 @@
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 50 100% 50%;
+    --accent: 0 0% 85%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
@@ -34,14 +34,14 @@
 
     --border: 0 0% 18%;
     --input: 0 0% 18%;
-    --ring: 50 100% 50%;
+    --ring: 0 0% 75%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio variables */
-    --yellow-glow: 0 0 30px hsl(50 100% 50% / 0.3);
-    --yellow-glow-strong: 0 0 60px hsl(50 100% 50% / 0.5);
-    --gradient-yellow: linear-gradient(135deg, hsl(50 100% 50%) 0%, hsl(45 100% 45%) 100%);
+    --accent-glow: 0 0 30px hsl(0 0% 75% / 0.2);
+    --accent-glow-strong: 0 0 60px hsl(0 0% 75% / 0.4);
+    --gradient-accent: linear-gradient(135deg, hsl(0 0% 85%) 0%, hsl(0 0% 65%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%) 0%, hsl(0 0% 6%) 100%);
     --gradient-card: linear-gradient(145deg, hsl(0 0% 8%) 0%, hsl(0 0% 4%) 100%);
   }
@@ -67,23 +67,23 @@
   }
 
   ::selection {
-    background: hsl(50 100% 50% / 0.3);
+    background: hsl(0 0% 75% / 0.3);
     color: hsl(0 0% 100%);
   }
 }
 
 @layer components {
-  .text-gradient-yellow {
+  .text-gradient-accent {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-yellow);
+    background-image: var(--gradient-accent);
   }
 
-  .glow-yellow {
-    box-shadow: var(--yellow-glow);
+  .glow-accent {
+    box-shadow: var(--accent-glow);
   }
 
-  .glow-yellow-strong {
-    box-shadow: var(--yellow-glow-strong);
+  .glow-accent-strong {
+    box-shadow: var(--accent-glow-strong);
   }
 
   .card-gradient {
@@ -100,7 +100,7 @@
 
   .hover-lift:hover {
     @apply -translate-y-1;
-    box-shadow: var(--yellow-glow);
+    box-shadow: var(--accent-glow);
   }
 
   .border-glow {
