@@ -17,7 +17,7 @@ const About = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Sobre <span className="text-gradient-yellow">Mim</span>
+            Sobre <span className="text-gradient-accent">Mim</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Conheça um pouco mais sobre minha trajetória e paixão por tecnologia
@@ -33,7 +33,7 @@ const About = () => {
             className="flex justify-center"
           >
             <div className="relative">
-              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 glow-yellow">
+              <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 glow-accent">
                 <img
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
                   alt="Foto de perfil"

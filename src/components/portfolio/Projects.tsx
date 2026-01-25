@@ -88,7 +88,7 @@ const Projects = () => {
           className="text-center mb-16 px-4"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Meus <span className="text-gradient-yellow">Projetos</span>
+            Meus <span className="text-gradient-accent">Projetos</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Alguns dos projetos que desenvolvi com dedicação e atenção aos detalhes
