@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+import TechScene3D from "./TechScene3D";
+
 const technologies = [
   {
     name: "Java",
@@ -12,11 +14,6 @@ const technologies = [
     name: "Spring",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
     description: "Framework Java",
-  },
-  {
-    name: "Spring Boot",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/springboot/springboot-original.svg",
-    description: "Microservices",
   },
   {
     name: "Hibernate",
@@ -100,8 +97,9 @@ const Technologies = () => {
   };
 
   return (
-    <section id="technologies" className="section-padding" ref={ref}>
-      <div className="container-narrow">
+    <section id="technologies" className="section-padding relative overflow-hidden" ref={ref}>
+      <TechScene3D />
+      <div className="container-narrow relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
