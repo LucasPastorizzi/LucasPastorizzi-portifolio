@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import foto from "@/assets/fotoperfil.png";
 import { 
   MapPin, 
   Briefcase, 
@@ -94,7 +95,7 @@ const About = () => {
             <div className="relative">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/30 glow-accent">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+                  src={foto}
                   alt="Foto de perfil"
                   className="w-full h-full object-cover"
                 />

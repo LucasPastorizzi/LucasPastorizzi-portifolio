@@ -22,8 +22,8 @@ const Header = () => {
     >
       <nav className="container-narrow flex items-center justify-between h-16 px-4 md:px-8">
         <a href="#home" className="text-xl font-bold">
-          <span className="text-gradient-yellow">Dev</span>
-          <span className="text-foreground">Portfolio</span>
+          <span className="text-gradient-yellow">Lucas</span>
+          <span className="text-foreground">Pastorizzi</span>
         </a>
 
         {/* Desktop Navigation */}

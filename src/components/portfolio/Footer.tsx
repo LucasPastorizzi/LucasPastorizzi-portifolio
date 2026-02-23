@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container-narrow">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <span>© {currentYear} Seu Nome. Todos os direitos reservados.</span>
+            <span>© {currentYear} Lucas Pastorizzi. Todos os direitos reservados.</span>
           </div>
           
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
