@@ -118,10 +118,13 @@ const About = () => {
             </h3>
             
             <p className="text-muted-foreground leading-relaxed">
-              Com mais de 3 anos de experiência em desenvolvimento web, me especializei em 
-              criar aplicações modernas e escaláveis. Minha jornada começou com curiosidade 
-              sobre como as coisas funcionam na internet, e evoluiu para uma carreira dedicada 
-              a transformar ideias em realidade digital.
+             Sou desenvolvedor web de Ivoti – RS e, desde pequeno, sempre fui movido pela curiosidade de entender como as coisas funcionam — especialmente quando envolviam tecnologia. Computadores, internet e sistemas sempre despertaram meu interesse, e o que começou como curiosidade acabou se transformando em profissão.
+
+Ao longo da minha jornada, venho construindo projetos que unem desenvolvimento front-end e back-end, com foco em aplicações funcionais, organizadas e bem estruturadas. Gosto de entender o problema antes de escrever qualquer linha de código, buscando criar soluções que realmente façam sentido para quem vai usar.
+
+Tenho interesse especial por desenvolvimento full-stack, arquitetura de sistemas e criação de produtos digitais que saiam do papel e se tornem soluções reais. Estou em constante evolução, aprendendo novas tecnologias e aprimorando minhas habilidades para construir aplicações cada vez mais modernas e escaláveis.
+
+
             </p>
 
             <p className="text-muted-foreground leading-relaxed">
@@ -133,7 +136,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>São Paulo, Brasil</span>
+                <span>Novo Hamburgo, Brasil</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Briefcase className="w-5 h-5 text-primary" />
@@ -141,7 +144,7 @@ const About = () => {
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <GraduationCap className="w-5 h-5 text-primary" />
-                <span>Ciência da Computação</span>
+                <span>Técnico em Desenvolvimento de Sistemas - Senac RS.  <br /> Graduando Análise e Desenvolvimento de Sistemas - Unisinos.</span>
               </div>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <Coffee className="w-5 h-5 text-primary" />

@@ -7,18 +7,18 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-[100svh] flex items-center justify-center"
     >
       {/* 3D Background */}
       <Scene3D />
       
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-transparent to-transparent" />
       
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(0_0%_15%/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(0_0%_15%/0.3)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="absolute inset-15 bg-[linear-gradient(to_right,hsl(0_0%_15%/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(0_0%_15%/0.3)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
-      <div className="container-narrow relative z-10 text-center px-4">
+      <div className="container-narrow relative z-10 text-center px-6 pt-24 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -32,16 +32,43 @@ const Hero = () => {
           <Sparkles className="w-5 h-5 text-primary" />
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight"
-        >
-          <span className="text-foreground">Olá, eu sou</span>
-          <br />
-          <span className="text-gradient-accent">Lucas Pastorizzi</span>
-        </motion.h1>
+      <motion.h1
+  initial="hidden"
+  animate="visible"
+  variants={{
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  }}
+  className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black mb-6 tracking-tight leading-tight"
+>
+  <motion.span
+    variants={{
+      hidden: { opacity: 0, y: 40 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    transition={{ duration: 0.6 }}
+    className="block text-foreground"
+  >
+    Olá, eu sou
+  </motion.span>
+
+  <motion.span
+    variants={{
+      hidden: { opacity: 0, y: 60, scale: 0.9 },
+      visible: { opacity: 1, y: 0, scale: 1 },
+    }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    className="block text-gradient-accent"
+  >
+    Lucas Pastorizzi
+  </motion.span>
+
+  
+</motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -57,7 +84,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-5 w-full sm:w-auto"
         >
           <Button variant="hero" size="lg" asChild>
             <a href="#projects">Ver Portfólio</a>

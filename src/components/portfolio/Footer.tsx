@@ -12,10 +12,8 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
-            <span>Feito com</span>
-            <Heart size={16} className="text-primary fill-primary" />
-            <span>e muito</span>
-            <span className="font-mono text-primary">{"<código/>"}</span>
+            
+           
           </div>
         </div>
       </div>

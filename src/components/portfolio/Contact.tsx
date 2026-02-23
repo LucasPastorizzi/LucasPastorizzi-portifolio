@@ -18,25 +18,25 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com",
+    href: "https://github.com/LucasPastorizzi",
     color: "hover:text-foreground",
   },
   {
-    name: "LinkedIn",
+    name: "LinkedIn", 
     icon: Linkedin,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/lucas-pastorizzi-6606b1315/",
     color: "hover:text-blue-500",
   },
   {
     name: "WhatsApp",
     icon: MessageCircle,
-    href: "https://wa.me/5511999999999",
+    href: "https://wa.me/5551998766944",
     color: "hover:text-green-500",
   },
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:contato@email.com",
+    href: "lucasdasilvapastorizzi@gmail.com",
     color: "hover:text-primary",
   },
 ];

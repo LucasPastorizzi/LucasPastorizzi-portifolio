@@ -18,8 +18,7 @@ const Header = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border"
-    >
+className="fixed top-0 inset-x-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border"    >
       <nav className="container-narrow flex items-center justify-between h-16 px-4 md:px-8">
         <a href="#home" className="text-xl font-bold">
           <span className="text-gradient-yellow">Lucas</span>
@@ -43,35 +42,34 @@ const Header = () => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
-          aria-label="Toggle menu"
+className="md:hidden p-2 text-foreground hover:text-primary transition-colors shrink-0"          aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-16 left-0 right-0 bg-background border-b border-border md:hidden"
+       {isOpen && (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className="fixed inset-0 top-16 bg-background/95 backdrop-blur-xl md:hidden"
+  >
+    <ul className="flex flex-col items-center justify-center h-[calc(100vh-4rem)] gap-8">
+      {navItems.map((item) => (
+        <li key={item.href}>
+          <a
+            href={item.href}
+            onClick={() => setIsOpen(false)}
+            className="text-2xl font-semibold text-foreground hover:text-primary transition-colors"
           >
-            <ul className="flex flex-col py-4">
-              {navItems.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block px-6 py-3 text-muted-foreground hover:text-primary hover:bg-secondary transition-colors"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+)}
       </nav>
     </motion.header>
   );

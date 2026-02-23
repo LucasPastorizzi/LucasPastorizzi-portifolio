@@ -3,53 +3,48 @@ import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import HomeEcom from "@/assets/Ecommerce.png";
+import FlypiEc from "@/assets/Flypii.png";
+import Daoraa from "@/assets/Daora.png";
+import OrientalJaponess from "@/assets/OrientalJapones.png"; 
 const projects = [
   {
     id: 1,
-    title: "E-commerce Platform",
+    title: "E-commerce - Loja Virtual",
     description: "Plataforma completa de e-commerce com carrinho, pagamentos e dashboard admin.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    technologies: ["React", "TypeScript", "Node.js", "MongoDB"],
-    demoUrl: "#",
-    githubUrl: "#",
+    image: HomeEcom,
+  technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "API "],
+    demoUrl: "https://lucaspastorizzi.github.io/dapper-dapper/",
+    githubUrl: "https://github.com/LucasPastorizzi/EcommerceVirtual",
   },
   {
     id: 2,
-    title: "Dashboard Analytics",
+    title: "Flypi - Landing Page + API",
     description: "Dashboard interativo com gráficos em tempo real e relatórios customizáveis.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    technologies: ["React", "D3.js", "Tailwind", "Firebase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    image: FlypiEc,
+    technologies: ["React","Tailwind", "API", "Framer Motion", "TypeScript", "Node.js"],
+    demoUrl: "https://lucaspastorizzi.github.io/flypi-black-3d-vibe/",
+    githubUrl: "https://github.com/LucasPastorizzi/flypi-black-3d-vibe",
   },
   {
     id: 3,
-    title: "App de Tarefas",
-    description: "Aplicativo de gestão de tarefas com drag-and-drop e sincronização em nuvem.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    technologies: ["React", "TypeScript", "Supabase"],
-    demoUrl: "#",
-    githubUrl: "#",
+    title: "Daora Massas - Projeto Java",
+    description: "Aplicativo de gestão de tarefas e sincronização em nuvem.",
+    image: Daoraa,
+    technologies: ["Java", "JavaX", "JPA", "MySQL", "Hibernate"],
+    demoUrl: "https://github.com/LucasPastorizzi/Daora-Project",
+    githubUrl: "https://github.com/LucasPastorizzi/Daora-Project",
   },
   {
     id: 4,
-    title: "Landing Page SaaS",
-    description: "Landing page moderna e responsiva para produto SaaS com animações.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    title: "Landing Page - Restaurante Japones",
+    description: "Landing page moderna e responsiva para restaurantes orientais com animações + agendamentos.",
+    image: OrientalJaponess,
     technologies: ["React", "Framer Motion", "Tailwind"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://lucaspastorizzi.github.io/Projeto-RestauranteOriental/",
+    githubUrl: "https://github.com/LucasPastorizzi/Projeto-RestauranteOriental",
   },
-  {
-    id: 5,
-    title: "API REST",
-    description: "API robusta com autenticação JWT, rate limiting e documentação Swagger.",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop",
-    technologies: ["Node.js", "Express", "PostgreSQL"],
-    demoUrl: "#",
-    githubUrl: "#",
-  },
+
 ];
 
 const Projects = () => {
