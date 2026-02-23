@@ -3,11 +3,11 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
 const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Sobre", href: "#about" },
-  { label: "Tecnologias", href: "#technologies" },
-  { label: "Projetos", href: "#projects" },
-  { label: "Contato", href: "#contact" },
+  { label: "Home", id: "home" },
+  { label: "Sobre", id: "about" },
+  { label: "Tecnologias", id: "technologies" },
+  { label: "Projetos", id: "projects" },
+  { label: "Contato", id: "contact" },
 ];
 
 const Header = () => {
@@ -16,6 +16,14 @@ const Header = () => {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+
+  const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -27,21 +35,24 @@ const Header = () => {
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6">
           {/* Logo */}
-          <a href="#home" className="text-xl font-bold whitespace-nowrap">
-            <span className="text-white-400">Lucas</span>
+          <button
+            onClick={() => handleScroll("home")}
+            className="text-xl font-bold whitespace-nowrap"
+          >
+            <span className="text-white">Lucas </span>
             <span className="text-white">Pastorizzi</span>
-          </a>
+          </button>
 
           {/* Desktop */}
           <ul className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
+              <li key={item.id}>
+                <button
+                  onClick={() => handleScroll(item.id)}
                   className="text-sm text-neutral-400 hover:text-yellow-400 transition-colors duration-300"
                 >
                   {item.label}
-                </a>
+                </button>
               </li>
             ))}
           </ul>
@@ -77,17 +88,17 @@ const Header = () => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 260, damping: 25 }}
-              className="fixed top-0 right-0 h-full w-72 bg-gradient-to-b from-slate-900 via-slate-950 to-black z-[999] md:hidden shadow-2xl border-l border-slate-800"
+              className="fixed top-0 right-0 h-full w-72 bg-black z-[999] md:hidden shadow-2xl border-l border-neutral-900"
             >
               {/* Drawer Header */}
-              <div className="flex items-center justify-between px-6 h-16 border-b border-slate-800 bg-slate-900">
+              <div className="flex items-center justify-between px-6 h-16 border-b border-neutral-900 bg-black">
                 <span className="text-lg font-semibold text-white">
                   Menu
                 </span>
 
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-md hover:bg-slate-800 transition-colors"
+                  className="p-2 rounded-md hover:bg-neutral-800 transition-colors"
                 >
                   <X size={24} className="text-white" />
                 </button>
@@ -96,14 +107,13 @@ const Header = () => {
               {/* Links */}
               <div className="flex flex-col mt-10 px-6 gap-6">
                 {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsOpen(false)}
-                    className="text-lg font-medium text-neutral-300 hover:text-yellow-400 transition-all duration-300 hover:translate-x-1"
+                  <button
+                    key={item.id}
+                    onClick={() => handleScroll(item.id)}
+                    className="text-left text-lg font-medium text-neutral-300 hover:text-yellow-400 transition-all duration-300 hover:translate-x-1"
                   >
                     {item.label}
-                  </a>
+                  </button>
                 ))}
               </div>
             </motion.div>
